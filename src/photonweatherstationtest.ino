@@ -343,9 +343,9 @@ void resetVariables() {
 //    battery_level = fuel.getSoC();
 //}
 
-double windSpeed (int sensor_clicks, float seconds_elapsed) {
+float windSpeed (int sensor_clicks, float seconds_elapsed) {
     String audit = "";
-    double x = 2 * PI * anemom_radius_cm ; //calculate the anemometer circumference
+    float x = 2 * PI * anemom_radius_cm ; //calculate the anemometer circumference
     x = x * sensor_clicks / 2; //multiply by half of the clicks to get wind "distance"
     x = x / seconds_elapsed; //divide by seconds elapsed to get wind speed in cm/sec
     x = x * SECS_IN_AN_HOUR / CM_IN_A_KM; //convert to km/h
