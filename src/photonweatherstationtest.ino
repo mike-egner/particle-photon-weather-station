@@ -31,7 +31,7 @@ unsigned long wind_counter = 0;
 int wind_dir = 0;
 double rainfall = 0;
 int soil_moist = 0;
-//double battery_level = 0;
+//int battery_level = 0;
 
 unsigned long wind_millis = 0;
 unsigned program_speed = 5 * 60 * 1000; //must be greater than 5000 for the system to work in low power mode
@@ -114,16 +114,6 @@ void setup() {
 //---------------------------------------------------------------
 
 void loop() {
-
-    /* This is not required if publishing appears to be working.
-    //Test publishing
-    if (Particle.publish("Publish", PRIVATE)) {
-        publish_counter++;
-        Serial.println("Successful publish. Loop counter = "+String(loop_counter)+", Publish counter = "+String(publish_counter));
-    } else {
-        Serial.println("Unsuccessful publish! Loop counter = "+String(loop_counter)+", Publish counter = "+String(publish_counter));
-    }
-    */
 
     //Get and print weather data.
     //updateBatteryStatus;
